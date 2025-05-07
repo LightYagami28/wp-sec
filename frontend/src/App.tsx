@@ -11,7 +11,7 @@ function App() {
         <div className='container'>
           <Header />
           <Scanner />
-          <div className='text-sm'>&copy; 2025 - Powered by <a href='https://github.com/Hiutaky' target='blank'>Hiutaky</a></div>
+          <div className='text-sm'>&copy; 2025 <a className="text-blue-500" href='https://github.com/Hiutaky/wp-sec' target='blank'>WpSec</a> - Powered by <a className='text-blue-500' href='https://github.com/Hiutaky' target='blank'>Hiutaky</a></div>
         </div>
       </div>
     </>
