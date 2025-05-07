@@ -1,28 +1,50 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite ⚡️🧪
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vite](https://img.shields.io/badge/Vite-5.0+-blueviolet?style=flat-square&logo=vite)](https://vitejs.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18+-61dafb?style=flat-square&logo=react)](https://reactjs.org/)
+[![License](https://img.shields.io/github/license/Hiutaky/react-ts-vite-template?style=flat-square)](LICENSE)
 
-Currently, two official plugins are available:
+> Minimal yet flexible boilerplate to kickstart your React + TypeScript project with Vite, HMR, and modern linting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React 18+ with TypeScript 5+
+- ⚡️ Powered by [Vite](https://vitejs.dev) for lightning-fast builds
+- ♻️ HMR (Hot Module Replacement) out of the box
+- ✅ ESLint and Prettier configured
+- 🔍 Recommended plugins and advanced type-aware linting
+
+---
+
+## 🔌 Plugin Options
+
+You can choose between two official Vite React plugins:
+
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) — uses **Babel** for Fast Refresh
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc) — uses **SWC** for better performance
+
+---
+
+## ✅ Advanced ESLint Setup
+
+To enable stricter, type-aware linting for production:
 
 ```js
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
+    // Recommended with type checking
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
+    
+    // For stricter code rules
     ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
+
+    // Optional: stylistic rules
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -31,7 +53,16 @@ export default tseslint.config({
 })
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
+
+## 🧩 Recommended React ESLint Plugins
+
+You can enhance React linting with:
+
+- [`eslint-plugin-react-x`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
+- [`eslint-plugin-react-dom`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
+
+Example configuration:
 
 ```js
 // eslint.config.js
@@ -40,15 +71,33 @@ import reactDom from 'eslint-plugin-react-dom'
 
 export default tseslint.config({
   plugins: {
-    // Add the react-x and react-dom plugins
     'react-x': reactX,
     'react-dom': reactDom,
   },
   rules: {
-    // other rules...
-    // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
 })
 ```
+
+---
+
+## 📦 Getting Started
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app
+npm install
+npm run dev
+```
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE)
+
+---
+
+## 🛠️ Maintained by [Hiutaky](https://github.com/Hiutaky)
