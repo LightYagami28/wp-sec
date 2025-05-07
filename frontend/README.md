@@ -1,48 +1,38 @@
-# React + TypeScript + Vite ⚡️🧪
+# ⚛️ React + TypeScript + Vite ⚡
 
-[![Vite](https://img.shields.io/badge/Vite-5.0+-blueviolet?style=flat-square&logo=vite)](https://vitejs.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18+-61dafb?style=flat-square&logo=react)](https://reactjs.org/)
-[![License](https://img.shields.io/github/license/Hiutaky/react-ts-vite-template?style=flat-square)](LICENSE)
-
-> Minimal yet flexible boilerplate to kickstart your React + TypeScript project with Vite, HMR, and modern linting.
+A minimal yet powerful starter template to kick off your **React** projects using **TypeScript** and **Vite**, with built-in **Hot Module Replacement** and **ESLint** integration.
 
 ---
 
 ## 🚀 Features
 
-- ⚛️ React 18+ with TypeScript 5+
-- ⚡️ Powered by [Vite](https://vitejs.dev) for lightning-fast builds
-- ♻️ HMR (Hot Module Replacement) out of the box
-- ✅ ESLint and Prettier configured
-- 🔍 Recommended plugins and advanced type-aware linting
+- **Lightning-fast** development with [Vite](https://vitejs.dev)
+- Modern React setup with JSX and TypeScript
+- Hot Module Replacement (HMR) for an optimized dev workflow
+- Linting powered by ESLint and extendable configurations
+- Easily customizable for production use
 
 ---
 
-## 🔌 Plugin Options
+## 🔌 Supported React Plugins
 
-You can choose between two official Vite React plugins:
+Choose the rendering engine that fits your needs:
 
-- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) — uses **Babel** for Fast Refresh
-- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc) — uses **SWC** for better performance
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) – powered by [Babel](https://babeljs.io/) ⚡  
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) – powered by [SWC](https://swc.rs/) ⚡
 
 ---
 
-## ✅ Advanced ESLint Setup
+## 🛠️ Expanding ESLint Configuration
 
-To enable stricter, type-aware linting for production:
+For production-grade projects, we recommend enabling **type-aware** lint rules:
 
 ```js
 export default tseslint.config({
   extends: [
-    // Recommended with type checking
-    ...tseslint.configs.recommendedTypeChecked,
-    
-    // For stricter code rules
-    ...tseslint.configs.strictTypeChecked,
-
-    // Optional: stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
+    ...tseslint.configs.recommendedTypeChecked, // Balanced rules
+    ...tseslint.configs.strictTypeChecked,      // Stricter codebase
+    ...tseslint.configs.stylisticTypeChecked,   // Optional styling rules
   ],
   languageOptions: {
     parserOptions: {
@@ -51,20 +41,18 @@ export default tseslint.config({
     },
   },
 })
-```
 
----
 
-## 🧩 Recommended React ESLint Plugins
+⸻
 
-You can enhance React linting with:
+🔍 Recommended ESLint Plugins for React
 
-- [`eslint-plugin-react-x`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
-- [`eslint-plugin-react-dom`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
+Improve your code quality and safety with:
+	•	eslint-plugin-react-x
+	•	eslint-plugin-react-dom
 
-Example configuration:
+Plugin Integration Example:
 
-```js
 // eslint.config.js
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
@@ -79,25 +67,44 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
-```
 
----
 
-## 📦 Getting Started
+⸻
 
-```bash
+📦 Quick Start
+
 npm create vite@latest my-app -- --template react-ts
 cd my-app
 npm install
 npm run dev
-```
 
----
+Then open http://localhost:5173 in your browser!
 
-## 📄 License
+⸻
 
-Licensed under the [MIT License](LICENSE)
+📁 Project Structure
 
----
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+├── public/
+├── index.html
+├── tsconfig.json
+├── vite.config.ts
 
-## 🛠️ Maintained by [Hiutaky](https://github.com/Hiutaky)
+
+⸻
+
+❤️ Contributing
+
+Pull requests, issues and ideas are welcome!
+
+⸻
+
+📝 License
+
+MIT — feel free to use, modify and share.
+
+⸻
+
+Happy coding! ✨
