@@ -10,6 +10,11 @@ A tool to scan WordPress sites for vulnerable plugins by analyzing HTML source c
 - Provides detailed vulnerability information including severity scores
 - Simple and intuitive web interface
 
+## Screenshots
+
+![Main View](/public/screen-1.png)
+![Vulnerabilities Dialog](/public/screen-2.png)
+
 ## Getting Started
 
 ### Prerequisites

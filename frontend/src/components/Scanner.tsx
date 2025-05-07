@@ -54,7 +54,7 @@ export default function Scanner() {
                             </div>
                         )
                     : scanResponse && scanResponse.plugins.length > 0 ?
-                        scanResponse.plugins.sort( (a, b ) => b.vulnerabilities.length - a.vulnerabilities.length ).map( (plugin, p) => 
+                        scanResponse.plugins.filter((p) => !p.slug.includes('netminds')).sort( (a, b ) => b.vulnerabilities.length - a.vulnerabilities.length ).map( (plugin, p) => 
                             <div className="p-3 bg-black border rounded-sm flex flex-col gap-2">
                                 <a href={plugin.url} target="blank">
                                     <span className="text-base font-medium" dangerouslySetInnerHTML={{ __html: plugin.name}}>
