@@ -42,7 +42,7 @@
 
 ### 🚀 Installation
 
-```bash
+
 # 1. Clone the repository
 git clone https://github.com/Hiutaky/wp-sec.git
 cd wp-sec
@@ -57,6 +57,7 @@ cd ..
 
 # 4. Run the development server
 bun run dev
+
 
 Open http://localhost:3000 in your browser to use the app.
 
@@ -76,11 +77,11 @@ Open http://localhost:3000 in your browser to use the app.
 
 ⸻
 
-📡 API
+ 📡 API
 
-POST /scan
+ POST /scan
 
-Request Body:
+ Request Body:
 
 {
   "url": "https://example.com"
